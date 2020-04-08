@@ -1,4 +1,4 @@
-import { getPlayer, postPlayer,readPlayer, updatePlayer, deletePlayer } from './player/player.swagger';
+import { getPlayer, postPlayer,readPlayer, updatePlayer, deletePlayer } from './player.swagger';
 
 module.exports = {
     swagger: "2.0",
