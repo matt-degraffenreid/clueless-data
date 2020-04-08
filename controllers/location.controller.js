@@ -1,7 +1,7 @@
 var Location = require('../model/location.model');
 
 exports.list_all_locations = function(req, res) {
-  Location.getAllPlayers(function(err, location) {
+  Location.getAllLocations(function(err, location) {
 
     console.log('controller')
     if (err)
@@ -24,7 +24,7 @@ exports.create_a_location = function(req, res) {
         }
 else{
   
-  Location.createPlayer(new_location, function(err, location) {
+  Location.createLocation(new_location, function(err, location) {
     
     if (err)
       res.send(err);
@@ -35,7 +35,7 @@ else{
 
 
 exports.read_a_location = function(req, res) {
-  Location.getPlayerById(req.params.locationId, function(err, location) {
+  Location.getLocationById(req.params.locationId, function(err, location) {
     if (err)
       res.send(err);
     res.json(location);

@@ -1,7 +1,7 @@
 var Weapon = require('../model/weapon.model');
 
 exports.list_all_weapons = function(req, res) {
-  Weapon.getAllPlayers(function(err, weapon) {
+  Weapon.getAllWeapons(function(err, weapon) {
 
     console.log('controller')
     if (err)
@@ -10,8 +10,6 @@ exports.list_all_weapons = function(req, res) {
     res.send(weapon);
   });
 };
-
-
 
 exports.create_a_weapon = function(req, res) {
   var new_weapon = new Weapon(req.body);
@@ -24,7 +22,7 @@ exports.create_a_weapon = function(req, res) {
         }
 else{
   
-  Weapon.createPlayer(new_weapon, function(err, weapon) {
+  Weapon.createWeapon(new_weapon, function(err, weapon) {
     
     if (err)
       res.send(err);
@@ -35,7 +33,7 @@ else{
 
 
 exports.read_a_weapon = function(req, res) {
-  Weapon.getPlayerById(req.params.weaponId, function(err, weapon) {
+  Weapon.getWeaponById(req.params.weaponId, function(err, weapon) {
     if (err)
       res.send(err);
     res.json(weapon);
