@@ -13,4 +13,4 @@ const database = process.env.DB_DATABASE || 'clueless';
 exports.host = host;
 exports.user = user;
 exports.password = password;
-//exports.database = database
+exports.database = database;
