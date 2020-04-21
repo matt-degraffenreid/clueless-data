@@ -1,5 +1,6 @@
-module.exports = "CREATE DATABASE IF NOT EXISTS clueless;"
-+ "USE clueless;"
+module.exports = "DROP DATABASE IF EXISTS clueless;"
++"CREATE DATABASE clueless;"
++"USE clueless;"
 +"CREATE TABLE `player` (`player_id` INT NOT NULL AUTO_INCREMENT,`player_socket` TEXT(255) NOT NULL,`player_location` INT,`player_character` INT,PRIMARY KEY (`player_id`));"
 +"CREATE TABLE 'weapon'( `weapon_id` INT NOT NULL AUTO_INCREMENT, `weapon_name` TEXT(255) NOT NULL, `weapon_location` INT, PRIMARY KEY (`weapon_id`));"
 +"CREATE TABLE `location` (" 
