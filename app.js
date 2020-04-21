@@ -27,7 +27,10 @@ var playerRoutes = require('./routes/player.routes');
 app.use("/player",playerRoutes);
 
 var locationRoutes = require('./routes/location.routes');
-app.use("/location",playerRoutes);
+app.use("/location",locationRoutes);
 
 var weaponRoutes = require('./routes/weapon.routes');
-app.use("/weapon",playerRoutes);
+app.use("/weapon",weaponRoutes);
+
+var gameRoutes = require('./routes/game.routes');
+app.use("/game",gameRoutes);
