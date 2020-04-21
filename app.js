@@ -25,3 +25,9 @@ var server = app.listen(8080, function(){
 
 var playerRoutes = require('./routes/player.routes');
 app.use("/player",playerRoutes);
+
+var locationRoutes = require('./routes/location.routes');
+app.use("/location",playerRoutes);
+
+var weaponRoutes = require('./routes/weapon.routes');
+app.use("/weapon",playerRoutes);
