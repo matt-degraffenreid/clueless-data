@@ -8,7 +8,7 @@ router.route('/')
     .get(weapon.list_all_weapons)
     .post(weapon.create_a_weapon);
 
-router.route('/weapon/:weaponId')
+router.route('/:weaponId')
     .get(weapon.read_a_weapon)
     .put(weapon.update_a_weapon)
     .delete(weapon.delete_a_weapon);
